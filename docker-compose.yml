@@ -2,8 +2,7 @@ version: "3.8"
 
 services:
   nginx:
-    build:
-      context: ./nginx
+    image: alokkum0r/django-notes-app:nginx
     container_name: nginx
     ports:
       - "80:80"
@@ -14,8 +13,7 @@ services:
       - django
 
   django:
-    build:
-      context: .
+    image: alokkum0r/django-notes-app:backend
     container_name: django
     ports:
       - "8000:8000"
